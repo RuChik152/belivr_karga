@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Permanent+Marker&family=Rubik+Dirt&family=Rubik+Glitch&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import "mixins";
+
+
+@font-face {
+  font-family: 'Monster';
+  src: url("../public/fonts/mrsmonster.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Znak Mono';
+  src: url("../public/fonts/znak-mono.ttf") format("truetype");
+}
+
+* {
+  list-style-type: none;
+  font-family: 'Monster';
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+#__next {
+  overflow: hidden;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slick-slide img {
+ @include _768 {
+   width: 62vw;
+   height: 78vh;
+ }
+}
+
+.slick-next:before {
+  content: '\276F';
+  font-size: 5vw;
+}
+
+.slick-prev:before {
+  content: '\276E';
+  font-size: 5vw;
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #c3ad15;
+}
+
+.SimpleSlideCustomer {
+  width: 89%;
+  margin: 0 auto;
+  height: fit-content;
+  .slick-list {
+    .slick-track {
+      .slick-slide {
+        margin: 0 40px;
+        img {
+          width: 62vw;
+          height: 78vh;
+        }
+      }
+    }
+  }
+}
+
+.SimpleSlideCustomer2 {
+  width: 89%;
+  margin: 0 auto;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  .slick-list {
+    //display: flex;
+    .slick-track {
+      .slick-slide {
+        //margin: 0 40px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.SimpleSlideCustomer3 {
+  width: 89vw;
+  margin: 0 auto;
+  .slick-list {
+    .slick-track {
+      .slick-slide,
+      .slick-active{
+        width: 100px;
+        height: 101px;
+        div {
+          div {
+            img {
+              width: 100px !important;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}

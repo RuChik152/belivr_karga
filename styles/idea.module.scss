@@ -1,0 +1,192 @@
+@import "./mixins";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  padding: 6% 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8B2062;
+  background-image: url("../public/images/idea/BG_IDEA.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .logo__block {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    @include _768 {
+      display: none;
+    }
+    .svg {
+      width: 61%;
+      opacity: 0.8;
+    }
+    .logo__block__text {
+      font-family: "Znak Mono", serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 7em;
+      line-height: 156px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: inline-block;
+      height: 0px;
+    }
+  }
+  .form__wrapper {
+    width: 34vw;
+    height: 67vh;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    @include _768 {
+      width: 60vw;
+      height: 73vh;
+    }
+    @include _516 {
+      width: 85vw;
+    }
+    .tittle {
+      .tittle__text {
+        font-family: 'Raleway', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 47px;
+        color: #FFFFFF;
+      }
+    }
+    .mail {
+      font-family: 'Raleway', serif;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form__label{
+        width: 68%;
+        font-size: 20px;
+        text-transform: capitalize;
+        @include _350 {
+          font-size: 14px;
+        }
+      }
+      .input {
+        width: 100%;
+        height: 47px;
+        border: none;
+        outline: none;
+        color: white;
+        transition: 0.4s linear;
+        background: none;
+        border-bottom: 1px solid white;
+        &::placeholder {
+          color: rgb(255, 255, 255);
+        }
+      }
+      .textarea {
+        height: 27vh;
+      }
+      .box__send {
+        display: flex;
+        align-items: center;
+        margin-top: 48px;
+        .check__container{
+          cursor: pointer;
+          .container__checkbox {
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+          }
+          .container__title {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 0 8px 0 8px;
+          }
+          .check_item {
+            opacity: 0;
+          }
+          .check_item__active {
+            opacity: 1;
+          }
+        }
+        .btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}
+
+.svg__radius__1 {
+  fill: white;
+  transform-origin: center;
+  animation-name: rotation;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.svg__radius__2 {
+  fill: white;
+  transform-origin: center;
+  animation-name: rotation2;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.arrow__btn {
+  stroke:#F1A738;
+  width: 85px;
+  height: 85px;
+}
+.arrow__btn__check {
+  stroke: #915b08;
+  width: 85px;
+  height: 85px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
