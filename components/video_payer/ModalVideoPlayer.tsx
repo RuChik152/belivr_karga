@@ -9,21 +9,41 @@ const plyrProps = {
     source: {
         type: 'video',
         sources: [
-            {
-                src: 'AWwdBlpNa_k',
-                provider: 'youtube',
-            },
+            // {
+            //     src: 'AWwdBlpNa_k',
+            //     provider: 'youtube',
+            // },
             //TODO Пример использования без Ютуба
-            // {
-            //     src: '/video/teaser_master.mp4',
-            //     provider: 'html5',
-            //     size: 720
-            // },
-            // {
-            //     src: '/video/teaser_master.mp4',
-            //     provider: 'html5',
-            //     size: 1080
-            // },
+            {
+                src: '/video/teasers/teaser_1920.mp4',
+                provider: 'html5',
+                size: 1920
+            },
+            {
+                src: '/video/teasers/teaser_1080.mp4',
+                provider: 'html5',
+                size: 1080
+            },
+            {
+                src: '/video/teasers/teaser_720.mp4',
+                provider: 'html5',
+                size: 720
+            },
+            {
+                src: '/video/teasers/teaser_640.mp4',
+                provider: 'html5',
+                size: 640
+            },
+            {
+                src: '/video/teasers/teaser_480.mp4',
+                provider: 'html5',
+                size: 480
+            },
+            {
+                src: '/video/teasers/teaser_320.mp4',
+                provider: 'html5',
+                size: 320
+            },
         ],
         poster: '/images/videoPlayer/poster.PNG',
     },
@@ -32,6 +52,7 @@ const plyrProps = {
         enabled: true,
         title: "TEST",
         resetOnEnd: true,
+        quality:{default: 1920, options: [1920,1080,720,640,480,320]},
         youtube: {
             controls: 0,
         },
