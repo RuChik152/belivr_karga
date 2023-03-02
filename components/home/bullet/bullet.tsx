@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Image from "next/image";
 import style from "./bullet.module.scss";
+import Modal from "../../modal/modal";
 
 interface BulletProps {
     src: any,
@@ -15,6 +16,8 @@ interface BulletProps {
 
 const Bullet = (props: BulletProps) : JSX.Element => {
 
+    const [active, setActive] = useState(false);
+
     const [config, setConfig] = useState({
         src: props.src,
         width: props.width,
@@ -26,9 +29,14 @@ const Bullet = (props: BulletProps) : JSX.Element => {
         }
     })
 
+    const showModalText = () => {
+        setActive(!active);
+    }
+
     return (
         <div className={style.main}>
-            <Image unoptimized={true} className={style.main__img} src={config.src} width={config.width} height={config.height} alt="image_bullet" quality={1}/>
+            <Modal show={active} showHandell={showModalText} text={config.text}/>
+            <Image onClick={showModalText}  unoptimized={true} className={style.main__img} src={config.src} width={config.width} height={config.height} alt="image_bullet" quality={1}/>
             <p style={config.styleText} className={style.main__name}>{config.name}</p>
             <p className={style.main__text}>{config.text}</p>
         </div>

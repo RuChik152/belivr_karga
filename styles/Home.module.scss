@@ -58,12 +58,66 @@
   width: 100%;
   justify-content: center;
   margin-top: 25px;
+  cursor: pointer;
   @include _768 {
     height: 30vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin-top: 0px;
+  }
+  .watch_svg {
+    &:hover {
+      .watch__border {
+        stroke: $color_violet;
+      }
+      .watch__title {
+        fill: $color_violet;
+      }
+      .watch__circle {
+        stroke: $color_violet;
+      }
+      .watch__play {
+        fill: $color_violet;
+      }
+      .watch__decor {
+        opacity: 0;
+      }
+    }
+  }
+  .watch__border {
+    stroke: $color_gold_active;
+    transition: .5s ease-in-out;
+  }
+  .watch__title {
+    fill: $color_white;
+    transition: .5s ease-in-out;
+  }
+  .watch__circle {
+    stroke: $color_gold_active;
+    transition: .5s ease-in-out;
+  }
+  .watch__play {
+    fill: $color_gold_active;
+    transition: .5s ease-in-out;
+  }
+  .watch__decor {
+    opacity: 1;
+    transition: .5s ease-in-out;
+  }
+
+  .play_svg {
+    &:hover {
+      .watch__border {
+        stroke: $color_violet;
+      }
+      .watch__title {
+        fill: $color_violet;
+      }
+      .watch__decor {
+        opacity: 0;
+      }
+    }
   }
   button {
     margin: 0 10px 0 10px;

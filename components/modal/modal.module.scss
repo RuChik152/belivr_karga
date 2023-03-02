@@ -1,0 +1,66 @@
+@import "@/_variables.scss";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  .wrapper {
+    width: 400px;
+    height: 400px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 1%;
+    border: 1px solid $color_gold_active;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .decor__left {
+      position: absolute;
+      bottom: 19px;
+      left: 21px;
+    }
+    .decor__right {
+      position: absolute;
+      top: 19px;
+      right: 21px;
+    }
+    .decor__bg {
+      position: absolute;
+      top: 47px;
+      right: 49px;
+    }
+    .wrapper__btn {
+      background: none;
+      border: none;
+      position: absolute;
+      cursor: pointer;
+      top: 5px;
+      left: 0px;
+      &:hover {
+        .wrapper__svg {
+          fill: $color_gold;
+        }
+      }
+      .wrapper__svg {
+        stroke: none;
+        fill: $color_gold_active;
+
+      }
+    }
+    .wrapper__text {
+      font-size: 20px;
+      color: $color_gold_active;
+      text-align: center;
+    }
+  }
+}
